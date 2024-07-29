@@ -18,7 +18,8 @@
 1. Для изолирования ошибки перейдём в файл Model.xml и найдем представление Few columns
 2. Найдя представление изучим *Id="Employee_ListView"*
 3. Увидим код, описывающий Few columns:
-		`<ListView Id="Employee_ListView" Caption="Employees" IsGroupPanelVisible="True" AutoExpandAllGroups="True" >`
+		```
+		<ListView Id="Employee_ListView" Caption="Employees" IsGroupPanelVisible="True" AutoExpandAllGroups="True" >`
 		  `<Columns>`
 		    `<ColumnInfo Id="Anniversary" PropertyName="Anniversary" Index="-1" />`
 		    `<ColumnInfo Id="Department" PropertyName="Department" Index="-1" GroupIndex="0" />)`
@@ -41,7 +42,8 @@
 		    `<Filter Id="Developers" Criteria="Position.Title = 'Developer'" IsNewNode="True" />`
 		  `</Filters>`
 		`</ListView>`
-4. Изолировать ошибку можно путем редактирования:
+		```
+5. Изолировать ошибку можно путем редактирования:
 		`<ColumnInfo Id="Department" PropertyName="Department" Index="-1" GroupIndex="0" />)`
 		Необходимо убрать: *GroupIndex="0"*
 	На выходе получаем: 
